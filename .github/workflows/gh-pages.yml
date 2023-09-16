@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [main]
+    branches: [gh-pages]
   pull_request:
-    branches: [main]
+    branches: [gh-pages]
 
 jobs:
   build:
@@ -42,6 +42,6 @@ jobs:
       - name: Deploy to Github-Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: main
+          branch: gh-pages
           folder: out
           token: ${{ secrets.DEPLOY_TOKEN }}
