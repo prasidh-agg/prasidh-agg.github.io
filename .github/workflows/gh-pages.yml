@@ -40,12 +40,6 @@ jobs:
 
       - run: touch ./out/.nojekyll
 
-      - name: Copy yarn.lock
-        run: cp yarn.lock out/
-      
-      - name: Copy package.json
-        run: cp package.json out/
-
       - name: Deploy to Github-Pages 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
