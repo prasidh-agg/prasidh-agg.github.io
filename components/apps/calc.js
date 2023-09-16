@@ -4,7 +4,6 @@ const Parser = require('expr-eval').Parser;
 
 const parser = new Parser({
     operators: {
-      // These default to true, but are included to be explicit
       add: true,
       concatenate: true,
       conditional: true,
