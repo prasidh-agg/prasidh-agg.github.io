@@ -216,9 +216,10 @@ function About() {
       </div>
       <ul className=" mt-4 leading-tight tracking-tight text-sm md:text-base w-5/6 md:w-3/4 emoji-list">
         <li className=" list-pc">
-          I'm a <span className=" font-medium">Graduate Student</span> currently pursuing Computer Science at ASU. I've previously worked at Deloitte as a backend developer for 
-          2 years, and now I'm looking for full-time software engineer roles! ( Hit me
-          up{" "}
+          I'm a <span className=" font-medium">Graduate Student</span> currently
+          pursuing Computer Science at ASU. I've previously worked at Deloitte
+          as a backend developer for 2 years, and now I'm looking for full-time
+          software engineer roles! ( Hit me up{" "}
           <a className="text-underline" href="mailto:paggar10@asu.edu">
             <u>@paggar10@asu.edu</u>
           </a>{" "}
@@ -230,7 +231,8 @@ function About() {
         </li>
         <li className=" mt-3 list-time">
           {" "}
-          When I am not coding my next project, I like to spend my time working out, playing chess, learning magic/cardistry, or watching {" "}
+          When I am not coding my next project, I like to spend my time working
+          out, playing chess, learning magic/cardistry, or watching{" "}
           <a
             href="https://www.youtube.com/@danidaortiz_oficial"
             target="_blank"
@@ -313,7 +315,8 @@ function Skills() {
             {" "}
             My areas of expertise are{" "}
             <strong className="text-ubt-gedit-orange">
-              java back-end development, especially Microservices, REST APIs, and Spring boot.
+              java back-end development, especially Microservices, REST APIs,
+              and Spring boot.
             </strong>
           </div>
         </li>
@@ -374,6 +377,11 @@ function Skills() {
               src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"
               alt="prasidh python"
             />
+            <img
+              className="m-1"
+              src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white"
+              alt="prasidh javascript"
+            />
           </div>
         </div>
         <div className="px-2 flex flex-wrap items-start w-1/2">
@@ -414,6 +422,24 @@ function Skills() {
 function Projects() {
   const project_list = [
     {
+      name: "VAST Challenge 2022 - Patterns of life",
+      date: "Fall 2023",
+      link: "https://github.com/asu-cse578-f2023/Pratyush-Revanth-Shriya-Priyanka-Anshita-Prasidh",
+      description: [
+        "A data visualization project showing patterns of life in the city of OHIO, done as part of official entry to the VAST CHALLENGE 2022 for data visualization.",
+      ],
+      domains: ["javascript", "d3.js", "html5", "css", "node", "postgres"],
+    },
+    {
+      name: "Visualizing Global development trends",
+      date: "Fall 2023",
+      link: "https://beeswarms-dv.netlify.app/",
+      description: [
+        "A data visualization project displaying an animated beeswarm chart to show demographic trends through the years for around 200 countries.",
+      ],
+      domains: ["javascript", "d3.js", "html5", "css"],
+    },
+    {
       name: "Image Classification with IaaS",
       date: "Spring 2023",
       link: "https://github.com/prasidh-agg/Image-Recognition-IaaS",
@@ -448,17 +474,16 @@ function Projects() {
         "A fibonacci calculator built using AWS Elastic beanstalk, Redis, and PostgreSQL.",
       ],
       domains: ["html5", "javascript", "redis", "postgres", "docker"],
-    }
+    },
   ];
 
   const tag_colors = {
-    
     html5: "pink-600",
     ML: "yellow-600",
     python: "green-200",
     java: "pink-300",
     python: "blue-300",
-    AWS: "purple-600"
+    AWS: "purple-600",
   };
 
   return (
