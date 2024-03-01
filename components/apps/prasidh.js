@@ -227,7 +227,15 @@ function About() {
         </li>
         <li className=" mt-3 list-building">
           {" "}
-          I enjoy building awesome softwares that solve practical problems.
+          I enjoy building awesome automations. Check them out at my {" "} 
+          <a
+            href="https://github.com/prasidh-agg"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            GitHub.
+          </a>
         </li>
         <li className=" mt-3 list-time">
           {" "}
@@ -282,16 +290,6 @@ function Education() {
             CGPA &nbsp; 8.9/10
           </div>
         </li>
-        <li className="list-disc mt-5">
-          <div className=" text-lg md:text-xl text-left font-bold leading-tight">
-            Class 12<sup>th</sup> (ICSE)
-          </div>
-          <div className=" text-sm text-gray-400 mt-0.5">2014 - 2016</div>
-          <div className=" text-sm md:text-base">Maths, Physics, Chemistry</div>
-          <div className="text-sm text-gray-300 font-bold mt-1">
-            Percentile Rank &nbsp; 93.8%
-          </div>
-        </li>
       </ul>
     </>
   );
@@ -315,7 +313,7 @@ function Skills() {
             {" "}
             My areas of expertise are{" "}
             <strong className="text-ubt-gedit-orange">
-              java back-end development, especially Microservices, REST APIs,
+               java back-end development, especially Microservices, REST APIs,
               and Spring boot.
             </strong>
           </div>
@@ -422,56 +420,84 @@ function Skills() {
 function Projects() {
   const project_list = [
     {
-      name: "VAST Challenge 2022 - Patterns of life",
+      name: "Pass Genius",
+      date: "Spring 2024",
+      link: "https://github.com/prasidh-agg/pass-genius",
+      description: [
+        "A minimalist chrome extension that helps users generate strong passwords on the fly. Now available on the chrome store.",
+      ],
+      domains: ["html", "css", "javascript", "chrome-extension"],
+    },
+
+    {
+      name: "Data Visualization Vast 2022",
       date: "Fall 2023",
       link: "https://github.com/asu-cse578-f2023/Pratyush-Revanth-Shriya-Priyanka-Anshita-Prasidh",
       description: [
-        "A data visualization project showing patterns of life in the city of OHIO, done as part of official entry to the VAST CHALLENGE 2022 for data visualization.",
+        "The project involved creating an interactive dashboard with 7 visualizations using D3.js and SQLite schemas to analyze urban mobility and lifestyle trends in Ohio. Project management for a six-member team followed Agile methodology, emphasizing strong communication skills. User experience was improved with tooltips, legends, and opacity adjustments for enhanced chart details and selection clarity.",
       ],
-      domains: ["javascript", "d3.js", "html5", "css", "node", "postgres"],
+      domains: ["javascript", "d3.js", "html5", "css", "node", "sqlLite"],
     },
     {
-      name: "Visualizing Global development trends",
+      name: "Beeswarm visualization of Global development trends",
       date: "Fall 2023",
       link: "https://beeswarms-dv.netlify.app/",
       description: [
-        "A data visualization project displaying an animated beeswarm chart to show demographic trends through the years for around 200 countries.",
+        "The project involved creating an interactive beeswarm chart using D3.js to visualize global development data, enabling users to explore trends across countries and regions over time. Smooth animated transitions and staggered delays were implemented to intuitively convey data changes. A responsive user interface with filtering controls for attributes like GDP and population dynamically updated the visualization in response to user input, enhancing usability.",
       ],
       domains: ["javascript", "d3.js", "html5", "css"],
     },
     {
-      name: "Image Classification with IaaS",
+      name: "Scalable Image Classification with AWS Optimization",
       date: "Spring 2023",
-      link: "https://github.com/prasidh-agg/Image-Recognition-IaaS",
+      link: "https://github.com/prasidh-agg/image-recognition-iaas",
       description: [
-        "An Image classification system made using Java, Python, AWS S3, SQS, Cloudwatch, and EC2.",
+        "The project focused on enhancing system performance and scalability by optimizing auto-scaling policies and CloudWatch alarms, and implementing custom step-scaling based on m1-m2 metrics, resulting in a processing time reduction of over 50%. Additionally, a scalable AWS architecture was implemented for image classification using Python/Boto S3 and Java/AWS SDK, enabling efficient processing of over 100 image requests with an average processing time of less than one second.",
       ],
-      domains: ["java", "AWS", "python"],
+      domains: ["java", "s3", "sqs", "cloudwatch", "auto-sclaing", "python"],
     },
     {
-      name: "Digit Classification with Offloading",
-      date: "Fall 2022",
-      link: "https://github.com/prasidh-agg/digit-classification-offloading",
+      name: "Hybrid Cloud using OpenStack",
+      date: "Spring 2023",
+      link: "https://github.com/prasidh-agg/face-recognition-openstack",
       description: [
-        "An android app that sends an image of a handwritten digit, broken into parts to 4 worker devices that each run ML models and together classify the digit.",
+        "I developed a hybrid cloud application utilizing OpenStack and AWS services like EC2, S3, Lambda, and DynamoDB for video processing. Reduced infrastructure costs by 30% with an OpenStack private cloud. Created a docker container with face recognition libraries for Lambda function, cutting cold start time by 40%. Implemented OpenStack private cloud with core services using Dev-Stack on Ubuntu VM.",
       ],
-      domains: ["java", "ML", "android-development"],
+      domains: ["python", "openstack", "AWS", "dynamoDB", "ubuntu", "lambda"],
     },
     {
-      name: "Face Recognition using PaaS",
+      name: "Cluster Validation - Meal Data Analysis",
+      date: "Spring 2023",
+      link: "https://github.com/prasidh-agg/meal-data-analysis",
+      description: [
+        "The project involved building an end-to-end data pipeline in Python for clustering and analyzing over 15,000 meal glucose readings to uncover trends in daily carb intake based on CGM and Insulin data. Investigation into DBSCAN and KMeans algorithms revealed DBSCAN had 20% higher accuracy for irregular meals. An automated pipeline was implemented for large-scale analysis to uncover personalized carb intake patterns from glucose data, including preprocessing, feature engineering, and clustering with KMeans and DBSCAN to group meals into seven carb categories.",
+      ],
+      domains: ["python", "pandas", "scikit-learn"],
+    },
+    {
+      name: "Lambda-Powered Face Recognition",
       date: "Spring 2023",
       link: "https://github.com/prasidh-agg/face-recognition-paas",
       description: [
-        "A face recognition system built using Java, tensorFlow, and AWS Lambda.",
+        "The project involved architecting a serverless application on AWS using Lambda, S3, and DynamoDB for real-time face recognition, reducing costs by 70% compared to an EC2-based approach. One-click app deployment and rollback were enabled using Docker and GitHub actions. Additionally, a load testing framework was crafted to simulate real-world traffic, guaranteeing processing of 100 sample videos in under 10 minutes, even during peak loads. Containerization was leveraged to slash cold start times by 40%.",
       ],
-      domains: ["java", "node", "ML", "AWS"],
+      domains: ["java", "node", "ML", "AWS", "python", "s3"],
     },
     {
-      name: "Fibo Calculator",
-      date: "Spring 2021",
-      link: "https://github.com/prasidh-agg/fibo-calculator/tree/master",
+      name: "Handwritten Digit Classification using Mobile Offloading",
+      date: "Fall 2022",
+      link: "https://github.com/prasidh-agg/digit-classification-offloading",
       description: [
-        "A fibonacci calculator built using AWS Elastic beanstalk, Redis, and PostgreSQL.",
+        "I developed a mobile application for handwritten digit recognition, utilizing one master smartphone and four slave server devices for distributed processing. Optimized image segmentation and distributed ML models across devices resulted in a 50% reduction in image processing time and 75% faster predictions respectively, while improving inter-device communication by 60%.",
+      ],
+      domains: ["python", "tensorflow", "android", "ML", "distributed-systems"],
+    },
+    {
+      name: "Fibonacci Calculator",
+      date: "Spring 2021",
+      link: "https://github.com/prasidh-agg/fibo-calculator",
+      description: [
+        "The project involved launching a web application on AWS Elastic Beanstalk (EBS) that calculated the Fibonacci series up to a number and cached the result in a Redis database, significantly improving search speeds by 98%. Results were stored in a PostgreSQL database to maintain a record of subsequent searches.",
       ],
       domains: ["html5", "javascript", "redis", "postgres", "docker"],
     },
@@ -567,3 +593,4 @@ function Resume() {
     ></iframe>
   );
 }
+
